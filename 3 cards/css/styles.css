@@ -1,0 +1,132 @@
+
+div.Main-Div{
+    background-color: white;
+    height: 500px;
+    width: 900px;
+    margin: 5% auto;
+    position: relative;
+}
+
+
+div.left-Div{
+    background-color: #E28525;
+    width: 33%;
+    height: 500px;
+    color: #E4F9F5;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+div.middle-Div{
+    background-color: #016972;
+    color:#E4F9F5 ;
+    width: 33%;
+    height: 500px;
+    position: absolute;
+    left: 33%;
+    top: 0;
+}
+div.last-Div{
+    background-color: #00403F;
+    color:#E4F9F5 ;
+    width: 34%;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    left: 66%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+img{
+    padding-left: 15%;
+    padding-top: 15%;
+    
+}
+
+h1{
+    font-family: 'Big Shoulders Display', cursive;
+    padding-left: 15%;
+
+}
+
+
+p{
+    font-family: 'Lexend Deca', sans-serif;
+    padding-left: 15%;
+    line-height: 2;
+    width: 70%;
+}
+.btn1 {
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: 'Lexend Deca', sans-serif;
+    color: #E38525;
+    font-size: 15px;
+    background: #E4F9F5;
+    padding: 10px 20px 10px 20px;
+    margin-left:15%;
+    margin-top: 15%;
+    text-decoration: none;
+    border:solid ;
+  }
+  
+  .btn1:hover {
+    background: #E38525;
+    color: #E4F9F5;
+    text-decoration: none;
+    border-color:#E4F9F5;
+    border-width: 2px;
+  }
+  .btn2 {
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: 'Lexend Deca', sans-serif;
+    color: #016972;
+    font-size: 15px;
+    background: #E4F9F5;
+    padding: 10px 20px 10px 20px;
+    margin-left:15%;
+    margin-top: 15%;
+    text-decoration: none;
+    border-color:#016972 ;
+    border:solid ;
+  }
+  
+  .btn2:hover {
+    background: #016972;
+    text-decoration: none;
+    border-color:#E4F9F5 ;
+    color: #E4F9F5;
+    border-width: 2px;
+    }
+
+
+  .btn3 {
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: 'Lexend Deca', sans-serif;
+    color: #00403F;
+    font-size: 15px;
+    background: #E4F9F5;
+    background-color: #E4F9F5;
+    border-inline-start-color: #E4F9F5;
+    padding: 10px 20px 10px 20px;
+    margin-left:15%;
+    margin-top: 15%;
+    text-decoration: none;
+    border-color:#00403F ;
+    border:solid ;
+    
+  }
+  
+  .btn3:hover {
+    background: transparent;
+    text-decoration: none;
+    border-color:#E4F9F5 ;
+    color: #E4F9F5;
+    border-width: 2px;
+  }
