@@ -1,1 +1,0 @@
-# 3Cards frontend practice
