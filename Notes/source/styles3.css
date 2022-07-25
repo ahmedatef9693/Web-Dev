@@ -1,0 +1,29 @@
+div{
+    padding: 10px;
+    margin: 10px;
+    background-color: whitesmoke;
+    width: 400px;
+    font-size: larger;
+    font-weight: bolder;
+    
+    /* border-style: solid;
+    border-color: white white white #e91e63; */
+    
+
+}
+
+div.first{
+    border-left: 5px solid #e91e63;
+    outline: whitesmoke solid 5px;
+}
+
+div.second{
+    border-left: 5px solid red;
+    outline: whitesmoke solid 5px;
+    visibility: hidden;
+}
+
+div.third{
+    border-left: 5px solid #009688;
+    outline: whitesmoke solid 5px;
+}
