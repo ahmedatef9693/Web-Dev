@@ -1,0 +1,33 @@
+
+
+
+table{
+    width: 700px;
+    margin: auto;
+    border-spacing: 3px;
+}
+table td{
+    background-color: #EEEEEE;
+    text-align: center;
+    
+}
+table thead td{
+    background-color: #404040;
+    color: white;
+}
+
+.view-button{
+    background-color: #2196f3;
+    color: white;
+    border: none;
+}
+.delete-button{
+    background-color: #E91E63;
+    color: white;
+    border: none;
+}
+
+.avatar{
+    width: 100px;
+    height: 100px;
+}
