@@ -1,0 +1,28 @@
+
+
+
+
+
+p{
+    counter-increment: member-counter;
+    background-color: #eee;
+    border-right: 5px solid #F44336;
+    width: 300px;
+    margin-left:auto ;
+    margin-right: auto;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+p::before{
+    content: counter(member-counter);
+    background-color: #F44336;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: -10px;
+    margin-right: 10px;
+    
+
+}
