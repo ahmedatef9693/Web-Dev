@@ -1,0 +1,40 @@
+
+
+
+
+
+
+.parent{
+    text-transform: capitalize;
+    height: 300px;
+    width: 500px;
+    padding: 20px;
+    background-color: #F2F2F4;
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+    transition: all 0.5s;
+
+}
+.parent:hover{
+    transform: translate(0,-50px);
+    
+}
+
+
+
+
+.child{
+    width: 400;
+    margin: 10px;
+    padding: 20px;
+    background-color: #DEDEDC;
+    transition: all 0.5s 0.5s;
+}
+
+
+.parent:hover .child{
+    transform: translate(0,50px);
+    
+}
+
