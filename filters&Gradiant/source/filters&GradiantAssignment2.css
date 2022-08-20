@@ -1,0 +1,55 @@
+
+*{
+ box-sizing: border-box;   
+}
+:root{
+    --elementsWidth:600px;
+}
+
+input{
+    width: var(--elementsWidth);
+    background-color: #eee;
+    border: transparent;
+    margin: 5px;
+    padding: 10px;
+    
+}
+div{
+    margin: 10px;
+    position: relative;
+}
+div::before{
+    content: "";
+    position: absolute;
+    top: 40.2px;
+    left: 5px;
+    width: var(--elementsWidth);
+    height: 2px;
+    background-image: linear-gradient(to right,#F44336 0% 50%,#009688 50% 100%);
+
+
+}
+input:focus{
+    outline: none;
+}
+
+
+
+
+.input1{
+    caret-color: red;
+}
+
+.input2,
+.input3{
+
+    pointer-events: none;
+    color: #757575;
+
+}
+
+
+
+
+
+
