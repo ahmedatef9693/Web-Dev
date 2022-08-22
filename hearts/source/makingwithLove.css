@@ -1,0 +1,166 @@
+
+*{
+    box-sizing: border-box;
+}
+body{
+    -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 600px;
+  height: 600px;
+  
+}
+
+
+
+
+
+.square{
+
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    position: absolute;
+    top: 40%;
+    left: 59%;
+
+
+
+}
+
+
+.heart{
+    width: 600px;
+    height: 600px;
+    position: relative;
+    
+}
+
+.heart::before{
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: red;
+    left: 354px;
+    top: 137px;
+
+}
+.heart::after{
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    left: 243px;
+    top: 241px;
+    background-color: red;
+
+}
+
+
+
+.love-paragraph{
+    
+    position: absolute;
+    right: -150px;
+    top: -12px;
+    transform: rotate(-45deg);
+    font-family: 'Permanent Marker', cursive;
+    font-size: 30px;
+    opacity: 0;
+    transition: all 1s;
+
+}
+
+
+
+.arrow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    width: 500px;
+    height: 2px;
+    background-color: black;
+    transform: rotate(95deg);
+    left: 180px;
+    top: -300px;
+    position: relative;
+}
+
+.arrow::before{
+    content: "^";
+    font-size: xx-large;
+    font-weight: bolder;
+    position: absolute;
+    left: 501px;
+    top: -17px;
+    transform: rotate(269deg);
+
+}
+
+
+
+.arrow::after{
+    content: "^";
+    font-size: xx-large;
+    font-weight: bolder;
+    position: absolute;
+    left: 0px;
+    top: -17px;
+    transform: rotate(269deg);
+
+}
+
+.A{
+    margin-bottom: -20px;
+    transform: rotate(178deg);
+    font-size: xx-large;
+    font-family: 'Permanent Marker', cursive;
+    margin-right: -50px;
+    color: red;
+    opacity: 0;
+    transition: all 1s;
+}
+.N{
+    color: red;
+    margin-left: -24px;
+    margin-top: 24px;
+    transform: rotate(526deg);
+    font-size: xx-large;
+    font-family: 'Permanent Marker', cursive;
+    opacity: 0;
+    transition: all 1s;
+
+}
+
+.heart:hover + .love-paragraph {
+    
+    opacity: 1;
+   color: red;
+
+}
+
+.arrow:hover .A {
+    opacity: 1;
+    color: red;
+
+}
+.arrow:hover .N {
+    opacity: 1;
+    color: red;
+
+}
+
+
+
+
+
+
+
+
+
