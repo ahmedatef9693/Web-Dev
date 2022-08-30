@@ -1,1 +1,72 @@
 
+*{
+    box-sizing: border-box;
+}
+
+
+
+
+
+.layout{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-areas: 
+    "head head head head head head head head "
+    "sec sec sec sec sec sec side side"
+    "foot foot foot foot foot foot foot foot ";
+    color: white;
+    
+
+
+}
+.layout header,section,footer,aside{
+    padding-left: 15px;
+    padding-top: 15px;
+    text-transform: capitalize;
+}
+
+header{
+    grid-area: head;
+    background-color: #03A9F4;
+}
+
+header::before{
+    content: "header";
+ 
+}
+
+section{
+    grid-area: sec;
+    background-color: #FF5722;
+
+}
+
+section::before{
+    content: "section";
+    
+}
+
+aside{
+    grid-area: side;
+    background-color: #607D8B;
+
+}
+
+aside::before{
+    content: "Aside";
+    
+}
+
+
+footer{
+    grid-area: foot;
+    background-color: #009688;
+
+}
+
+footer::before{
+    content: "footer";
+    
+}
