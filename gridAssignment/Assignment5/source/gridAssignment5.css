@@ -1,0 +1,36 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+.grid {
+    display: grid;
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr auto;
+    gap: 10px 10px;
+      
+  }
+
+  .grid div{
+    background-color: #E91E63;
+    color: white;
+    font-weight: bolder;
+    max-height: 20px;
+    text-align: center;
+    
+    
+  }
+
