@@ -1,0 +1,96 @@
+
+
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+
+
+.grid {
+    display: grid;
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    gap: 15px 15px;
+
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows:  repeat(6,1fr);
+    
+    grid-template-areas: 
+    "eight eight eight eight eight eight eight eight"
+    "two two two two two three three three"
+    "four four four five five five five five"
+    "six six six five five five five five"
+    "seven seven seven five five five five five"
+    "one one one one one one one one";
+
+
+  }
+
+  .grid div{
+    display: flex;
+    background-color: #2196F3;
+    color: white;
+    font-weight: bolder;
+    justify-content: center;
+    align-items: center;
+
+
+  }
+
+
+.one{
+    order: 8;
+    grid-area: one;
+
+}
+
+.two{
+    grid-area: two;
+
+}
+
+.three{
+    grid-area: three;
+
+}
+.four{
+    grid-area: four;
+
+}
+
+.five{
+    grid-area: five;
+    grid-row: span 3;
+
+}
+
+.six{
+    grid-area: six;
+
+}
+
+.seven{
+    grid-area: seven;
+
+}
+
+.eight{
+    grid-area: eight;
+    order: -1;
+}
+
+
+
+
+
+
+
+
+
+
+
