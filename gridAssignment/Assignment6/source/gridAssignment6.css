@@ -1,0 +1,150 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    
+    
+    
+}
+
+.grid{
+    display: grid;
+    gap: 10px 10px;
+    padding: 40px 40px;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(4,auto);
+    grid-template-rows: repeat(7,auto);
+    grid-template-areas: 
+    "front front ios side"
+    "front front ios side"
+    "net full full side"
+    "net full full side"
+    "net android android side"
+    "net android android side"
+    "iosdev iosdev iosdev iosdev";
+
+
+
+}
+
+.front-end-dev{
+    grid-area: front;
+    background-color: white;
+    grid-row: span 2;
+    padding: 5px 20px;
+    
+}
+.ios-dev{
+    grid-area: ios;
+    grid-row: span 2;
+    background-color: white;
+    padding: 5px 20px;
+}
+.black-card{
+    background-color: black;
+    grid-area: side;
+    color: white;
+    grid-row: span 6;
+    padding: 5px 20px;
+}
+.net-developer{
+    grid-area: net;
+    background-color: white;
+    padding: 5px 20px;
+    /* grid-row: span 4; */
+}
+.full-stack-developer{
+    grid-area: full;
+    padding: 5px 20px;
+    /* grid-column: span 2; */
+    background-color: black;
+    color: white;
+}
+.android-developer{
+    grid-area: android;
+    padding: 5px 20px;
+    background-color: white;
+}
+
+.name{
+    height: 8px;
+    font-family: sans-serif;
+    text-transform: capitalize;
+}
+.ios-develpoer{
+    grid-area: iosdev;
+    background-color: white;
+    padding: 5px 20px;
+    grid-column: span 1;
+
+}
+
+h4{
+    color: grey;
+    padding-top: -10px;
+    text-transform: capitalize;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+.front-end-dev,
+.black-card,
+.ios-dev,
+.black-card,
+.ios-develpoer,
+.net-developer,
+.full-stack-developer,
+.android-developer
+{
+    position: relative;
+}
+.front-end-dev::before,
+.ios-dev::before,
+.black-card::before,
+.ios-develpoer::before,
+.net-developer::before,
+.full-stack-developer::before,
+.android-developer::before
+{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #FF3D00;
+  
+}
+
+.front-end-dev::after,
+.ios-dev::after,
+.black-card::after,
+.ios-develpoer::after,
+.net-developer::after,
+.full-stack-developer::after,
+.android-developer::after
+{
+
+    content: '"';
+    position: absolute;
+    font-size: 50px;
+    bottom: 30px;
+    right: 20px;
+    width: 1%;
+    height: 10px;
+    color: #4C4C4C;
+    transform: rotate(19deg);
+    font-family: sans-serif;
+
+
+}
+
+
+
