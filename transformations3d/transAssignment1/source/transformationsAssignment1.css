@@ -1,0 +1,44 @@
+
+*{
+    box-sizing: border-box;
+    margin: auto;
+}
+
+
+
+h1{
+    margin-top:200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100px;
+    padding: 70px;
+    background-color: orangered;
+    color: white;
+    z-index: 3;
+
+    
+}
+
+
+h1::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    transform: skew(10deg,10deg);
+    background-color: orangered;
+    z-index: -1;
+}
+
+h1::after{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    transform: skew(-10deg,-10deg);
+    background-color: orangered;
+    z-index: -5;
+}
