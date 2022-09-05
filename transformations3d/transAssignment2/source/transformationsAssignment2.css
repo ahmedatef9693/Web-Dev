@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h1{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #009688;
+    color: white;
+    width: 150px;
+    height: 100px;
+    position: relative;
+}
+
+h1::before{
+    transform: skewX(16deg);
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    left: -45px;
+    background-color: #009688;
+
+}
+h1::after{
+    content: "";
+    position: absolute;
+    width: 41px;
+    height: 100%;
+    right: 126px;
+    background-color: #009688;
+    transform: skew(16deg,1deg);
+    
+}
+
+
