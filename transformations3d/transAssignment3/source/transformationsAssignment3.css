@@ -1,0 +1,44 @@
+
+
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+div{
+    position: relative;
+    background-color: #607d8b;
+    width: 291px;
+    height: 300px;
+    border-bottom: 5px solid black;
+}
+
+
+div::before{
+    position: absolute;    
+    content: "";
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    top: -103px;
+    left: 43px;
+    transform: rotate(45deg);
+    border-right: 5px solid white;
+    border-bottom: 5px solid white;
+
+}
+
+div::after{
+    content: "Ahmed";
+    position: absolute;
+    color: white;
+    transform: translate(15px,271px);
+
+}
