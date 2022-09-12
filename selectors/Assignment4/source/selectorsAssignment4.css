@@ -1,0 +1,8 @@
+
+
+
+div[title]:not(.parent > div , body > .no-need){
+    color: red;
+}
+
+
