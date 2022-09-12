@@ -1,0 +1,6 @@
+
+
+
+h3 + div:nth-last-child(2):not(.no-need > div , .no-need-2 > div) {
+    color: red;
+}
