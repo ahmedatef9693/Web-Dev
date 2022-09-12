@@ -1,0 +1,6 @@
+
+
+
+.parent > .baby:only-child{
+    color: red;
+}
