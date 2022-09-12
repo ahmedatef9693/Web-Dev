@@ -1,0 +1,6 @@
+
+
+div:not(:first-child , :last-child) , h3:not(:first-of-type,:last-of-type), p:not(:last-child){
+
+    color: red;
+}
