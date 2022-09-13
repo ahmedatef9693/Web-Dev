@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+}
+
+
+.parent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.parent > div {
+    background-color: #EEEEEE;
+    margin-bottom: 6px;
+    padding: 5px;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+    flex-basis: 100%;
+}
+p{
+    color: black;
+    opacity: 0.9;
+    font-weight: normal;
+}
+
+
+
+/* Medium Screens */
+@media (min-width:992px){
+    .parent > div {
+        color: red;
+        flex-basis: calc(50% - 6px);
+    }
+
+
+}
+
+
+/* Large Screen */
+@media (min-width:1200px){
+    .parent > div {
+        color: #009688;
+        flex-basis: calc(25% - 6px);
+    }
+
+}
