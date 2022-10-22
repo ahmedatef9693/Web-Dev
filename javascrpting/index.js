@@ -351,8 +351,55 @@ console.log(customObject.info());
 
 
 
+//factory method
+
+function employee(name,department,salary){
+    return {
+        employeeName:name,
+        employeeDepartment:department,
+        employeeSalary:salary,
+        employeeInfo:function(){
+            return "this is "+this.employeeName + " his department : "+this.employeeDepartment+ " his salary : "+this.employeeSalary;
+        }
+    }
+
+}
 
 
+var emp1 = employee("ahmed","SD",6000);
+
+console.log(emp1.employeeInfo());
+
+
+
+
+
+//constructor method
+
+function Employee(name,department,salary){
+    this.empName = name;
+    this.empDepartment = department;
+    this.empSalary = salary;
+}
+
+
+
+var emp2 = new Employee("ahmed","Software Engineering",8000);
+console.log(emp2);
+
+let flag = emp2.hasOwnProperty("empName");
+console.log(flag);
+console.log(emp2.toString());
+
+console.log(Object.keys(emp2));
+console.log(Object.values(emp2));
+
+delete emp2.empName;
+
+for (keys in emp2){
+    console.log(keys + ":"+emp2[keys]);
+
+}
 
 
 
