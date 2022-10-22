@@ -238,33 +238,120 @@
 
 
 
-onerror = errorHandler;
+// onerror = errorHandler;
 
-function errorHandler(msg,url,l,col,err){
-    let newLine = "<br>";
-    document.write(msg + newLine);
-    document.write(url + newLine);
-    document.write(l + newLine);
-    document.write(col + newLine);
-    document.write(err + newLine);
-    return false;
+// function errorHandler(msg,url,l,col,err){
+//     let newLine = "<br>";
+//     document.write(msg + newLine);
+//     document.write(url + newLine);
+//     document.write(l + newLine);
+//     document.write(col + newLine);
+//     document.write(err + newLine);
+//     return false;
+// }
+
+
+
+// var response = parseInt(prompt("Enter value within range 10 to 25"));
+
+
+// if (response < 10)
+//     throw "less than expected";
+// else if(response > 25)
+//     throw RangeError("out of range error");
+// else
+//     alert("value entered is within range");
+
+
+
+// console.log("Done");
+
+
+// Anonymous function 
+
+
+// var myfun = function(a,b){
+//     return a+b;
+// }
+
+// console.log(myfun(5,4));
+
+
+// console.log(func1(5,5));
+
+// function func1(a,b){
+//     return a*b;
+// }
+
+
+
+
+// var arr8 = [1,2,"abc",function(a,b){return a*b},false];
+
+// console.log(arr8[3](5,3));
+
+
+
+
+// function newAddingfunction(x,y,z){
+
+//     return function(){
+//         return x + y + z;
+//     }
+
+
+// }
+
+
+// var resultAddingfunction = newAddingfunction(5,5,20);
+// console.log(resultAddingfunction());
+
+
+//constructor creation
+var obj = new Object();
+obj.name = "ahmed";
+obj.age = 26;
+obj.id = 55662;
+
+
+//leiteral creation
+var obj2 = {};
+obj2.objName = "sara";
+obj2.age = 24;
+obj2.id = 33669;
+obj2.display = function(){
+    return "this function of an object";
 }
 
+obj2["display_years"] =function(){
+    return "1998 years old";
+} 
+
+var location = "12645 st.";
+
+obj2.loc = location;
+obj2[location] = "cairo";
+
+console.log(obj2[location]);
 
 
-var response = parseInt(prompt("Enter value within range 10 to 25"));
+
+var customObject = { 
+    name:"ahmed",
+    age:26,
+    profession:"software engineer",
+    live:"cairo",
+    info:function(){
+        return "this is " + this.name + " he is "+this.age + " years old "+ "working as "+this.profession + " lives in "+this.live;
+    }
+}
+
+console.log(customObject.info());
 
 
-if (response < 10)
-    throw "less than expected";
-else if(response > 25)
-    throw RangeError("out of range error");
-else
-    alert("value entered is within range");
 
 
 
-console.log("Done");
 
 
 
