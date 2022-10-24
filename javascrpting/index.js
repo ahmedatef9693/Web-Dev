@@ -499,22 +499,30 @@ Object.defineProperties(newEmployee2,{
 // making object properities immutable
 
 //freeze
-const constObject = {name:"teto",age:60};
-Object.freeze(constObject);
-constObject.name = "ahmed";
-console.log(constObject);
+// const constObject = {name:"teto",age:60};
+// Object.freeze(constObject);
+// constObject.name = "ahmed";
+// console.log(constObject);
 
 
 //seal
-const anotherObject = {name:"katkot",age:36};
-Object.seal(anotherObject);
-anotherObject.address = "12645st.";
-console.log(anotherObject);
-anotherObject.name="tego";
-console.log(anotherObject);
+// const anotherObject = {name:"katkot",age:36};
+// Object.seal(anotherObject);
+// anotherObject.address = "12645st.";
+// console.log(anotherObject);
+// anotherObject.name="tego";
+// console.log(anotherObject);
 
+//preventExtension
+// we cannot add new prop only update and delete 
 
-
+const lastObject = {name:"kate",age:333};
+Object.preventExtensions(lastObject);
+console.log(lastObject);
+lastObject.id = 5;
+console.log(lastObject);
+// delete lastObject.name;
+// console.log(lastObject);
 
 
 
