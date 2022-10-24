@@ -308,98 +308,219 @@
 
 
 //constructor creation
-var obj = new Object();
-obj.name = "ahmed";
-obj.age = 26;
-obj.id = 55662;
+// var obj = new Object();
+// obj.name = "ahmed";
+// obj.age = 26;
+// obj.id = 55662;
 
 
-//leiteral creation
-var obj2 = {};
-obj2.objName = "sara";
-obj2.age = 24;
-obj2.id = 33669;
-obj2.display = function(){
-    return "this function of an object";
-}
+// //leiteral creation
+// var obj2 = {};
+// obj2.objName = "sara";
+// obj2.age = 24;
+// obj2.id = 33669;
+// obj2.display = function(){
+//     return "this function of an object";
+// }
 
-obj2["display_years"] =function(){
-    return "1998 years old";
-} 
+// obj2["display_years"] =function(){
+//     return "1998 years old";
+// } 
 
-var location = "12645 st.";
+// var location = "12645 st.";
 
-obj2.loc = location;
-obj2[location] = "cairo";
+// obj2.loc = location;
+// obj2[location] = "cairo";
 
-console.log(obj2[location]);
+// console.log(obj2[location]);
 
 
 
-var customObject = { 
-    name:"ahmed",
-    age:26,
-    profession:"software engineer",
-    live:"cairo",
-    info:function(){
-        return "this is " + this.name + " he is "+this.age + " years old "+ "working as "+this.profession + " lives in "+this.live;
+// var customObject = { 
+//     name:"ahmed",
+//     age:26,
+//     profession:"software engineer",
+//     live:"cairo",
+//     info:function(){
+//         return "this is " + this.name + " he is "+this.age + " years old "+ "working as "+this.profession + " lives in "+this.live;
+//     }
+// }
+
+// console.log(customObject.info());
+
+
+
+
+// //factory method
+
+// function employee(name,department,salary){
+//     return {
+//         employeeName:name,
+//         employeeDepartment:department,
+//         employeeSalary:salary,
+//         employeeInfo:function(){
+//             return "this is "+this.employeeName + " his department : "+this.employeeDepartment+ " his salary : "+this.employeeSalary;
+//         }
+//     }
+
+// }
+
+
+// var emp1 = employee("ahmed","SD",6000);
+
+// console.log(emp1.employeeInfo());
+
+
+
+
+
+// //constructor method
+
+// function Employee(name,department,salary){
+//     this.empName = name;
+//     this.empDepartment = department;
+//     this.empSalary = salary;
+// }
+
+
+
+// var emp2 = new Employee("ahmed","Software Engineering",8000);
+// console.log(emp2);
+
+// let flag = emp2.hasOwnProperty("empName");
+// console.log(flag);
+// console.log(emp2.toString());
+
+// console.log(Object.keys(emp2));
+// console.log(Object.values(emp2));
+
+// delete emp2.empName;
+
+// for (keys in emp2){
+//     console.log(keys + ":"+emp2[keys]);
+
+// }
+
+
+
+// var myObject = {
+//     name:"ahmed",
+//     age:26,
+//     department:"SW",
+
+// }
+
+// Object.defineProperties(myObject,{
+//     name:{writable:false,value:"ahmed",enumerable:false,configurable:false,},
+//     age:{writable:false},
+//     department:{},
+
+// })
+
+// myObject.name = "sara";
+// myObject.age = 55;
+// console.log(myObject.age + "Done");
+
+
+
+
+// var employeeObject = {
+//     empName : "sara",
+//     empCertificate:"urban and regional planning",
+//     empAge : 24,
+// }
+
+function employeeFactory(name,certificate,age){
+
+    return{
+        empName:name,
+        empCertificate:certificate,
+        empAge:age,
+        
     }
+
 }
 
-console.log(customObject.info());
+// var newEmployee = employeeFactory("sara","urban and regional planning",24);
+// console.log(newEmployee.empInfo());
 
 
 
 
-//factory method
+// data descriptors
 
-function employee(name,department,salary){
-    return {
-        employeeName:name,
-        employeeDepartment:department,
-        employeeSalary:salary,
-        employeeInfo:function(){
-            return "this is "+this.employeeName + " his department : "+this.employeeDepartment+ " his salary : "+this.employeeSalary;
+// var object_to_be_described = {
+//     name:"kawsr",
+//     certificate:"commerce",
+//     age:30,
+// }
+
+
+var newEmployee2 = employeeFactory("kawsr","commerce",30);
+
+Object.defineProperties(newEmployee2,{
+    empName:{
+        writable:false,
+        configurable:false,
+        enumerable:true,
+        value:"kawser",
+    },
+    empCertificate:{
+        writable:true,
+        configurable:true,
+        enumerable:true,
+        value:"commerce",
+    },
+    empAge:{
+        writable:false,
+        configurable:false,
+        enumerable:false,
+        value:50,
+    },
+    displayInfo:{
+        get:function(){
+            return "empName : "+this.empName + '\n' + "empCertificate : "+this.empCertificate +'\n'+ "empAge : "+this.empAge;
         }
     }
 
-}
+});
 
 
-var emp1 = employee("ahmed","SD",6000);
-
-console.log(emp1.employeeInfo());
+// console.log(newEmployee2.displayInfo);
 
 
-
-
-
-//constructor method
-
-function Employee(name,department,salary){
-    this.empName = name;
-    this.empDepartment = department;
-    this.empSalary = salary;
-}
+// const objects
 
 
 
-var emp2 = new Employee("ahmed","Software Engineering",8000);
-console.log(emp2);
 
-let flag = emp2.hasOwnProperty("empName");
-console.log(flag);
-console.log(emp2.toString());
+// Object.freeze vs Object.seal
 
-console.log(Object.keys(emp2));
-console.log(Object.values(emp2));
+// making object properities immutable
 
-delete emp2.empName;
+//freeze
+const constObject = {name:"teto",age:60};
+Object.freeze(constObject);
+constObject.name = "ahmed";
+console.log(constObject);
 
-for (keys in emp2){
-    console.log(keys + ":"+emp2[keys]);
 
-}
+//seal
+const anotherObject = {name:"katkot",age:36};
+Object.seal(anotherObject);
+anotherObject.address = "12645st.";
+console.log(anotherObject);
+anotherObject.name="tego";
+console.log(anotherObject);
+
+
+
+
+
+
+
+
+
 
 
 
