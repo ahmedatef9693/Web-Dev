@@ -544,14 +544,14 @@ Object.defineProperties(newEmployee2,{
 
 //arguments
 
-var funArgs = function(){
-    // console.log(arguments.length);
-    let sum = 0;
-    for (arg in arguments){
-        sum += arguments[arg];
-    }
-    return sum;
-}
+// var funArgs = function(){
+//     // console.log(arguments.length);
+//     let sum = 0;
+//     for (arg in arguments){
+//         sum += arguments[arg];
+//     }
+//     return sum;
+// }
 
 
 // console.log(funArgs(10,10,10,10));
@@ -559,63 +559,111 @@ var funArgs = function(){
 
 
 
-var str = "this is javascript";
-console.log([].join.apply(str,["*"]));
+// var str = "this is javascript";
+// console.log([].join.apply(str,["*"]));
 
-var str2 = "this is another string";
-console.log([].join.call(str2,"-"));
-
-
-var result = [].join.bind(str2);
-console.log(result("__"));
+// var str2 = "this is another string";
+// console.log([].join.call(str2,"-"));
 
 
-
-function outer(){
-    function innerFunction(){
-        return 5 + 2;
-    }
-    return innerFunction();
-}
+// var result = [].join.bind(str2);
+// console.log(result("__"));
 
 
 
-var res = outer();
-console.log(res);
+// function outer(){
+//     function innerFunction(){
+//         return 5 + 2;
+//     }
+//     return innerFunction();
+// }
 
 
 
-//closures
+// var res = outer();
+// console.log(res);
 
 
-function outerFun(outerVariable){
-    return function innerFun(innerVariable){
 
-        console.log("outerVariable : " + outerVariable);
-        console.log("innerVariable : " + innerVariable);
+// //closures
+
+
+// function outerFun(outerVariable){
+//     return function innerFun(innerVariable){
+
+//         console.log("outerVariable : " + outerVariable);
+//         console.log("innerVariable : " + innerVariable);
         
 
-    };
+//     };
+// }
+
+
+// var newFunVariable = outerFun(10);
+
+// newFunVariable(5);
+
+
+
+
+
+// let myname = "hamada";
+
+// function displayName(){
+//     console.log(myname);
+// }
+
+// myname = "hamood";
+
+// displayName();
+
+
+
+
+
+
+
+function newOuterFunction(){
+   var arr = [];
+
+    for (var i = 0; i < 3; i++) {
+        
+        // if we pushed function only it will not push each index because it hasnt been called at all
+        arr.push(
+            //immediatly invoked function expression
+
+            //completely isolated
+            (function(index){
+                return function(){
+                    console.log(index);
+                }
+
+            })(i));
+            
+    }
+    return arr;
+}
+
+var arr = newOuterFunction();
+var functionIndex = 0;
+while(functionIndex < arr.length){
+    arr[functionIndex]();
+    functionIndex++;
 }
 
 
-var newFunVariable = outerFun(10);
-
-newFunVariable(5);
 
 
 
 
 
-let myname = "hamada";
 
-function displayName(){
-    console.log(myname);
-}
 
-myname = "hamood";
 
-displayName();
+
+
+
+
 
 
 
