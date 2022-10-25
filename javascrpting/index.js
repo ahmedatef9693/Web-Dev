@@ -686,28 +686,42 @@ var score = (()=>{
 
 
 
-console.log(score.current());
-score.increment();
+// console.log(score.current());
+// score.increment();
 
-console.log(score.current());
-score.increment();
+// console.log(score.current());
+// score.increment();
 
-console.log(score.current());
-score.decrement();
-console.log(score.current());
+// console.log(score.current());
+// score.decrement();
+// console.log(score.current());
 
-score.reset();
-console.log(score.current());
-
-
+// score.reset();
+// console.log(score.current());
 
 
 
+// Revealing pattern
+
+var game = (()=>{
+    let count = 0;
+    const current = ()=>{return count;}
+    const increment = ()=>{count++;}
+    const decrement = ()=>{count--;}
+    const reset = ()=>{count = 0;}
+    return{
+        current: current,
+        increment: increment,
+        decrement:decrement,
+        reset:reset,
+    }
+})();
 
 
 
 
-
-
+console.log(game.current());
+game.increment();
+console.log(game.current());
 
 
