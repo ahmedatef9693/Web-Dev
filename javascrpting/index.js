@@ -623,50 +623,81 @@ Object.defineProperties(newEmployee2,{
 
 
 
-function newOuterFunction(){
-   var arr = [];
+// function newOuterFunction(){
+//    var arr = [];
 
-    for (var i = 0; i < 3; i++) {
+//     for (var i = 0; i < 3; i++) {
         
-        // if we pushed function only it will not push each index because it hasnt been called at all
-        arr.push(
-            //immediatly invoked function expression
+//         // if we pushed function only it will not push each index because it hasnt been called at all
+//         arr.push(
+//             //immediatly invoked function expression
 
-            //completely isolated
-            (function(index){
-                return function(){
-                    console.log(index);
-                }
+//             //completely isolated
+//             (function(index){
+//                 return function(){
+//                     console.log(index);
+//                 }
 
-            })(i));
-            
+//             })(i));
+
+//     }
+//     return arr;
+// }
+
+// var arr = newOuterFunction();
+// var functionIndex = 0;
+// while(functionIndex < arr.length){
+//     arr[functionIndex]();
+//     functionIndex++;
+// }
+
+
+
+//making private variables like counter which we can use only through f1 function 
+
+var increment = (function(){
+    //private variable
+    let counter = 0;
+    return function displayIncrement(){
+        counter++;
+        console.log("hello "+counter);
+    };
+})();
+
+
+var callFunction = 0;
+while(callFunction < 10){
+    increment();
+    callFunction++;
+}
+
+
+// making module pattern
+
+var score = (()=>{
+    let count = 0;
+    return{
+        current: () => {return count;},
+        increment: () => {count++;},
+        decrement:function(){count--;},
+        reset:function(){count = 0;},
     }
-    return arr;
-}
-
-var arr = newOuterFunction();
-var functionIndex = 0;
-while(functionIndex < arr.length){
-    arr[functionIndex]();
-    functionIndex++;
-}
+})();
 
 
 
+console.log(score.current());
+score.increment();
 
+console.log(score.current());
+score.increment();
 
+console.log(score.current());
+score.decrement();
+console.log(score.current());
 
-
-
-
-
-
-
-
-
-
-
-
+score.reset();
+console.log(score.current());
 
 
 
