@@ -516,13 +516,113 @@ Object.defineProperties(newEmployee2,{
 //preventExtension
 // we cannot add new prop only update and delete 
 
-const lastObject = {name:"kate",age:333};
-Object.preventExtensions(lastObject);
-console.log(lastObject);
-lastObject.id = 5;
-console.log(lastObject);
+// const lastObject = {name:"kate",age:333};
+// Object.preventExtensions(lastObject);
+// console.log(lastObject);
+// lastObject.id = 5;
+// console.log(lastObject);
 // delete lastObject.name;
 // console.log(lastObject);
+
+
+// var myFunction = new Function('a','b','return a + b;');
+
+
+
+//anonymous function
+// (function(){
+//     console.log(500);
+
+// });
+
+//anonymous function called once
+// (function(){
+//     console.log("hello world");
+
+// })();
+
+
+//arguments
+
+var funArgs = function(){
+    // console.log(arguments.length);
+    let sum = 0;
+    for (arg in arguments){
+        sum += arguments[arg];
+    }
+    return sum;
+}
+
+
+// console.log(funArgs(10,10,10,10));
+
+
+
+
+var str = "this is javascript";
+console.log([].join.apply(str,["*"]));
+
+var str2 = "this is another string";
+console.log([].join.call(str2,"-"));
+
+
+var result = [].join.bind(str2);
+console.log(result("__"));
+
+
+
+function outer(){
+    function innerFunction(){
+        return 5 + 2;
+    }
+    return innerFunction();
+}
+
+
+
+var res = outer();
+console.log(res);
+
+
+
+//closures
+
+
+function outerFun(outerVariable){
+    return function innerFun(innerVariable){
+
+        console.log("outerVariable : " + outerVariable);
+        console.log("innerVariable : " + innerVariable);
+        
+
+    };
+}
+
+
+var newFunVariable = outerFun(10);
+
+newFunVariable(5);
+
+
+
+
+
+let myname = "hamada";
+
+function displayName(){
+    console.log(myname);
+}
+
+myname = "hamood";
+
+displayName();
+
+
+
+
+
+
+
 
 
 
