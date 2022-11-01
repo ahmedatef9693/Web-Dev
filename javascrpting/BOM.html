@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="childWindow.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+
+    <input type="button" value="open win" onclick="openNewWin()">
+    <input type="button" value="close win" onclick="closeNewWin()">
+    <input type="button" value="changebackground" onclick="changebackground()">
+    <input type="button" value="moving" onclick="movingWindow()">
+    <div style="width: 100%; height:80px"></div>
+    <input type="button" value="startTimeout" onclick="startTimeout()">
+    <input type="button" value="startTimeInterval" onclick="startTimeInterval(1)">
+    <input type="button" value="stopTimeInterval" onclick="stopTimeInterval()">
+    <br>
+    <div style="width: 100%; height:80px"></div>
+    <input type="button" value="startTimeout2" onclick="startTimeout2(5)">
+    <input type="button" value="stopTimout2" onclick="stopTimout2()">
+    <br>
+    <div style="width: 100%; height:80px"></div>
+    <input type="button" value="printHistory" onclick="getHistory()">
+    <input type="button" value="gotoPage" onclick="gotoPage()">
+
+    <div style="width: 100%; height:80px"></div>
+
+    <form action="page1.html">
+        <label for=""></label>
+        <input type="text" name="username" placeholder="enter your name">
+        <input type="submit" value="send data">
+    </form>
+
+    <div style="width: 100%; height:80px"></div>
+
+
+    <input type="button" value="getType" name="getType" onclick="getType()">
+
+
+
+
+
+    
+</body>
+</html>
