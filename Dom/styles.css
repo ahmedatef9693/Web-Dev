@@ -1,0 +1,35 @@
+/* div{
+    background-color: aqua;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    margin-bottom: 20px;
+    
+} */
+
+input[type="text"]{
+    background-color: black;
+    color: white;
+}
+
+
+.c1{
+    background-color: brown;
+}
+
+.c2{
+    background-color: blueviolet;
+}
+.c3{
+    background-color: yellow;
+}
+
+
+#myDiv{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 200px;
+    height: 200px;
+    border: 2px black solid;
+
+}
