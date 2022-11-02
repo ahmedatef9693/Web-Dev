@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="">
+        <label for="">User Name</label>
+        <input type="text" name="username">
+        <br>
+        
+        <label for="">User Address</label>
+        <input type="text" name="userAddress">
+        <br>
+
+        <label for="">Male</label>
+        <input type="radio" name="gender" value="m">
+
+        <label for="">Female</label>
+        <input type="radio" name="gender" value="f">
+        <br>
+
+        <div id="txt">this is text</div>
+
+        <input type="button" value="change" onclick="changeDisplay()">
+        <input type="button" value="changeAll" onclick="changeAllDisplay()">
+        <input type="button" value="changeText" onclick="changeText()">
+        <input type="button" value="make it disapear" onclick="makeitDisapear()">
+
+        <div id="item" class="c1 c2">item checking</div>
+
+    </form>
+
+    <div id="item2">item 2 is here</div>
+
+    <div id="myDiv">
+
+    </div>
+
+    <input type="button" value="addNode" onclick="addNode()">
+
+    <input type="button" value="addText" onclick="addTextNode()">
+
+
+
+
+
+    <script>
+        function changeDisplay(){
+            //making sure that query selector return HTML Element
+            /** @type {HTMLElement} */
+            (document.querySelector('input[type="text"]')).style.backgroundColor = "white";    
+                
+        }
+
+        /** @type {HTMLElement} */
+        function changeAllDisplay(){
+            
+            let elements = document.querySelectorAll('input[type="text"]');
+
+            elements.forEach(element => {
+                element.style.backgroundColor="white";
+                element.style.color = "black";
+            });
+        }
+
+        function changeText(){
+            document.getElementById('txt').innerHTML = "<b>ahmed is here</b>";
+            
+        }
+
+        function makeitDisapear(){
+            let element = document.getElementById('txt');
+            element.style.display = "none";
+
+        }
+
+        function removeClass(){
+            document.getElementById('item').classList.remove("c2");
+
+        }
+
+        function addClass(){
+            document.getElementById('item').classList.add("c3");
+        }
+
+        function showMeCurrentStyle(){
+            console.log(getComputedStyle(document.getElementById('item')).backgroundColor);
+        }
+
+        function addNode(){
+            const newNode = document.createElement("div");
+            newNode.style.backgroundColor = "red";
+            newNode.style.width = "100px";
+            newNode.style.height = "100px";
+            newNode.style.transform = "translate(50%,50%)";
+            document.getElementById('myDiv').appendChild(newNode);
+
+        }
+        function addTextNode(){
+            var textNode = document.createTextNode("hello iam coding");
+            var parentNode = document.getElementById('item2');
+            // var parentNode = document.getElementById('item2').parentNode;
+            console.log(parentNode);
+            document.body.insertBefore(textNode , parentNode);
+
+    
+            // document.body.insertBefore(textNode , document.getElementById('item'));
+        }
+
+        
+
+
+        removeClass();
+        addClass();
+        showMeCurrentStyle();
+
+
+        
+    </script>
+
+
+
+
+    
+</body>
+</html>
