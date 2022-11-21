@@ -11,6 +11,7 @@ html {
   font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana,
     "sans-serif";
 }
+
 nav {
   background-color: black;
   color: #fec901;
@@ -51,6 +52,9 @@ nav a:last-child {
 }
 .social-navbar-icons {
   display: none;
+}
+.social-navbar-icons i:hover {
+  background-color: #f6c000;
 }
 nav a:not(.social-navbar-icons, :last-child) {
   text-decoration: none;
