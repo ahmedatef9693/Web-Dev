@@ -1,0 +1,28 @@
+body {
+  perspective: 800px;
+}
+
+#card-section {
+  background-color: transparent;
+  width: 176px;
+  height: 500px;
+  margin: 150px auto;
+
+  transition: 1s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+div {
+  position: absolute;
+}
+
+#card-section:hover {
+  transform: rotateY(180deg);
+}
+
+#card-section > div:last-child {
+  backface-visibility: hidden;
+}
+#card-section > div:first-child {
+  transform: rotateY(180deg);
+}
