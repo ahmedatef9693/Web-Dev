@@ -25,9 +25,7 @@
 html {
   scroll-behavior: smooth;
 }
-body {
-  height: 1000px;
-}
+
 #sect1 > .container i {
   color: #222533;
 }
@@ -580,9 +578,7 @@ body {
   #sect10 .contact-us {
     width: 20%;
   }
-  .about-company a {
-    /* width: 50px; */
-  }
+
   .links {
     display: flex;
     justify-content: space-between;
@@ -638,9 +634,7 @@ body {
   #sect7 .parent-row {
     display: flex;
   }
-  #sect7 .row1 {
-    /* margin-left: 10px; */
-  }
+
   #sect7 article figure:not(.left-image-figure) {
     margin-left: 10px;
     width: 40%;
@@ -718,10 +712,6 @@ body {
     left: -40px;
   }
 }
-
-/* #sect3 .container div h2 {
-  color: #fff;
-} */
 
 /* 
 @media (min-width: 768px) {
