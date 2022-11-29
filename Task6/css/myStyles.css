@@ -404,7 +404,7 @@ html {
   margin-bottom: 50px;
 }
 #sect10 header {
-  margin-top: 20px;
+  margin-top: 70px;
   margin-bottom: 20px;
   font-size: 1.2rem;
 }
@@ -454,9 +454,26 @@ html {
   border: 2px solid #fff;
   border-radius: 50%;
   font-size: 0.8rem;
-  padding: 5px;
   text-decoration: none;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: #fff;
+  width: fit-content;
+}
+.latest-post a div:first-child {
+  font-size: 1rem;
+  font-weight: bolder;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.latest-post a div:last-child {
+  margin-bottom: 5px;
+  margin-top: -3px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .latest-post a:hover {
   color: #f6c000;
@@ -563,6 +580,10 @@ html {
   }
   .explore-link a::before {
     left: -18px;
+  }
+  .explore-link a {
+    margin-bottom: 10px;
+    margin-left: 30px;
   }
 
   #sect10 .container {
