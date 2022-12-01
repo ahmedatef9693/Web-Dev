@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="calculator">
+      <header></header>
+      <section id="calc-sect">
+        <div onclick="render_div(1) ">1</div>
+        <div onclick="render_div(2)">2</div>
+        <div onclick="render_div(3)">3</div>
+        <div onclick="render_div(4)">4</div>
+        <div onclick="render_div(5)">5</div>
+        <div onclick="render_div(6)">6</div>
+        <div onclick="render_div(7)">7</div>
+        <div onclick="render_div(8)">8</div>
+        <div onclick="render_div(9)">9</div>
+        <div onclick="render_div(0)">0</div>
+        <div onclick="render_div('*')">*</div>
+        <div onclick="render_div('-')">-</div>
+        <div onclick="render_div('+')">+</div>
+        <div onclick="render_div('/')">/</div>
+        <div onclick="render_div('cos')">cos</div>
+        <div onclick="render_div('sin')">sin</div>
+        <div onclick="render_div('tan')">tan</div>
+        <div onclick="converter('bin')">Bin</div>
+        <div onclick="converter('hex')">hex</div>
+        <div onclick="converter('oct')">oct</div>
+        <div onclick="render_div('bracket')">bracket</div>
+        <div onclick="applyEquation()">=</div>
+        <div onclick="clearAll()">clear</div>
+      </section>
+    </div>
+
+    <script src="calculator.js"></script>
+  </body>
+</html>
