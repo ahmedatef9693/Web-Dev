@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="btn" type="button" value="get_text" />
+    <div></div>
+
+    <script>
+      document.getElementById("btn").addEventListener("click", function () {
+        var xhr = new XMLHttpRequest();
+        var txt = "";
+        var jsonObject = "";
+        xhr.onreadystatechange = function () {
+          //ready state = 4 means we have response
+          if (xhr.readyState == 4) {
+            //   response succeed
+            if (xhr.status == 200) {
+              // txt = xhr.responseText;
+              //converting json object from string to an object
+              jsonObject = JSON.parse(xhr.responseText);
+              displayFormat(jsonObject);
+            }
+          }
+        };
+        xhr.open("get", "std.json");
+        xhr.send("");
+      });
+
+      function displayFormat(jsonObject) {
+        jsonObject.forEach((element) => {
+          for (const key in element) {
+            document.getElementsByTagName("div")[0].innerHTML +=
+              key + " : " + element[key] + "<br>";
+          }
+          document.getElementsByTagName("div")[0].innerHTML +=
+            "----------------" + "<br>";
+        });
+      }
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

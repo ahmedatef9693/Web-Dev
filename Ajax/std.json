@@ -1,0 +1,21 @@
+[{
+    "name": "ahmed",
+    "dept": "SC",
+    "age": 25
+},
+{
+    "name": "sara",
+    "dept": "CS",
+    "age": 21
+},
+{
+    "name": "kareem",
+    "dept": "CSyS",
+    "age": 23
+},
+{
+    "name": "fawzy",
+    "dept": "IS",
+    "age": 22
+}
+]
