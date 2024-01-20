@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   //Challenge
+      //   let myAdmins = ["Ahmed", "Osama", "Sayed", "Essam", "Stop", "Samera"];
+      //   let myAdmins2 = [];
+      //   let employees = [
+      //     "Amgad",
+      //     "Sameh",
+      //     "Ameer",
+      //     "Omar",
+      //     "Othman",
+      //     "Amany",
+      //     "Samia",
+      //     "Eman",
+      //     "Eder",
+      //   ];
+      //   let count_for_employees = 0;
+      //   for (let index = 0; index < myAdmins.length; index++) {
+      //     if (myAdmins[index] === "Stop") {
+      //       break;
+      //     }
+      //     myAdmins2[index] = myAdmins[index];
+      //   }
+      //   //   console.log(myAdmins2);
+      //   document.write(`<div>We Have ${myAdmins2.length} Admins</div><hr>`);
+
+      //   for (let j = 0; j < myAdmins2.length; j++) {
+      //     document.write(`<div>The Admin For Team ${j + 1} is ${myAdmins[j]}`);
+      //     document.write(`<h3>Team Members:</h3>`);
+      //     for (let index = 0; index < employees.length; index++) {
+      //       // const element = array[index];
+      //       if (myAdmins2[j].charAt(0) === employees[index].charAt(0)) {
+      //         document.write(
+      //           `<p>-${count_for_employees + 1} ${employees[index]}</p>`
+      //         );
+      //         count_for_employees++;
+      //       }
+      //     }
+      //     count_for_employees = 0;
+      //     document.write(`</div>`);
+      //     document.write(`<hr>`);
+      //   }
+
+      //   Assignment
+      let friends = ["Ahmed", "Sayed", "Ali", 1, 2, "Mahmoud", "Amany"];
+      let index = 0;
+      let counter = 0;
+
+      // Output
+      //   ("1 => Sayed");
+      //   ("2 => Mahmoud");
+
+      while (index < friends.length) {
+        if (typeof friends[index] === "string") {
+          if (friends[index].charAt(counter) !== "A") {
+            console.log(friends[index]);
+          }
+        }
+
+        index++;
+      }
+    </script>
+  </body>
+</html>

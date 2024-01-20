@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let theName = "Mona",
+        theGender = "Female",
+        theAge = 35;
+      let result = document.write(
+        `Hello ${theGender === "Male" ? "Mr" : "Mrs"} ${theName}`
+      );
+
+      let ageResult =
+        theAge <= 30
+          ? "less than 30"
+          : theAge > 40
+          ? "greater than 30"
+          : "unknown";
+
+      console.log(ageResult);
+    </script>
+  </body>
+</html>

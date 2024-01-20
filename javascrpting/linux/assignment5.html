@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // let str = "Ahmed Atef Mohamed";
+      // console.log(str.indexOf("A"));
+      // console.log(str.lastIndexOf("A"));
+      // console.log(str.slice(6, 10));
+      // console.log(str.repeat(3));
+      // console.log(str.split(" ", 2));
+      // console.log(str.substring(10, 1));
+      // console.log(str.substr(0, 5));
+      // console.log(str.includes("f"));
+      // console.log(str.startsWith("A", 6));
+
+      // //challenge strings
+      // let a = "Elzero Web School";
+      // console.log(a.slice(2, 6).charAt(0).toUpperCase().concat(a.slice(3, 6)));
+      // console.log(a.charAt(a.indexOf("h")).toUpperCase().repeat(8));
+      // console.log(a.split(" ", 1));
+      // console.log(`${a.substr(0, 6)} ${a.substr(-6)}`);
+      // console.log(a.length - 1);
+      // console.log(
+      //   `${a.charAt(0).toLowerCase()}${a
+      //     .slice(1, a.length - 1)
+      //     .toUpperCase()}${a.charAt(a.length - 1).toLowerCase()}`
+      // );
+
+      //assignment 1
+      let userName = "Elzero";
+      console.log(userName.charAt(0).toLowerCase()); // e
+      console.log(userName[0].toLowerCase()); // e
+      console.log(userName.split("")[0].toLowerCase()); // e
+      console.log(userName.toLowerCase().substring(0, 1)); // e
+      console.log(userName[userName.toLowerCase().indexOf("e")].toLowerCase()); // e
+      console.log(userName.charAt(0).toLowerCase().repeat(3)); // eee
+      //assignment 2
+      let word = "Elzero";
+      let letterZ = "z";
+      let letterE = "e";
+      let letterO = "O";
+      console.log(word.includes(letterZ)); // True
+      console.log(word.startsWith(letterE.toUpperCase())); // True
+      console.log(word.endsWith(letterO.toLowerCase())); // True
+    </script>
+  </body>
+</html>

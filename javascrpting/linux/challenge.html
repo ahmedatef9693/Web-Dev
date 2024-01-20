@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let titleData = "El Zero",
+        describtionData = "Elzero Web School",
+        dateData = "25/10";
+      let Content = `
+        <div class="card">
+            <h3>
+                Hello ${titleData}
+            </h3>
+            <p>
+                ${describtionData}
+            </p>
+            <span>
+                ${dateData}
+            </span>
+
+        </div>
+        `;
+      document.write(Content.repeat(4));
+    </script>
+  </body>
+</html>
