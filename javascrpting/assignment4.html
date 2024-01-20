@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   console.log((100).toString());
+      //   console.log((300).toString());
+      //   console.log((300.822).toFixed(2));
+      //   console.log(parseFloat("300.54 ahmed"));
+      //   console.log(isNaN("sss"));
+      //   console.log(Number.isInteger(500));
+      //   console.log(Math.trunc(800.56));
+
+      //challenge 3
+      let a = 1_00;
+      let b = 2_00.5;
+      let c = 1e2;
+      let d = 2.4;
+      //find the smallest number in all these variables and return integer
+      console.log(Math.trunc(Math.min(a, b, c, d)));
+      //use variable a and d to get 10000
+      console.log(a ** Math.floor(d));
+      // get integer 2 from variable d by four methods
+      console.log(Math.floor(d));
+      console.log(parseInt(d));
+      console.log(Math.trunc(d));
+      console.log(Math.ceil(Math.sqrt(d)));
+      //use b and d to get 66.67 (string) and 67
+      console.log((Math.trunc(b) / Math.ceil(d).toFixed(2)).toFixed(2)); // 66.67 string
+      console.log(Math.round(Math.trunc(b) / Math.ceil(d).toFixed(2)));
+
+      //Assignment 4
+      console.log(+"100000");
+      console.log(+100_000);
+      console.log(Number("100000"));
+      console.log(Number(100_000));
+      console.log(Math.trunc("100000"));
+      console.log(Math.floor("100000.1"));
+      console.log(Math.abs(Number.MIN_SAFE_INTEGER));
+      console.log(Number.MAX_SAFE_INTEGER.toString().length);
+
+      let myVar = "100.56789 Views";
+      console.log(Math.trunc(parseFloat(myVar)));
+      console.log(parseFloat(myVar).toFixed(2));
+      let num = 10;
+      console.log(Number.isInteger(num) + Number.isInteger(num));
+
+      let flt = 10.4;
+      console.log("flt");
+      console.log(Math.trunc(flt));
+      console.log(Math.floor(flt));
+      console.log(Math.round(flt));
+      //   console.log(flt / 1e1);
+      let min = Math.ceil(0);
+      let max = Math.floor(4);
+      console.log(Math.floor(Math.random() * (max - min + 1) + min));
+    </script>
+  </body>
+</html>
