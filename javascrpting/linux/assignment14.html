@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   //challenge 1
+      //   let names = (...mynames) => `String [${mynames.join("],[")}] => Done!`;
+      //   console.log(names("Osama", "Mohamed", "Ali", "Ibrahim"));
+
+      //   //challenge 2
+      //   let myNumbers = [20, 50, 10, 60];
+      //   let calc = (one, two, ...nums) => one + two + nums[Number(false)];
+      //   console.log(calc(10, myNumbers[Number(false)], myNumbers[Number(true)])); //80
+      //assignment 1
+      //   function getDetails(zName, zAge, zCountry) {
+      //     function namePattern(zName) {
+      //       // Write Your Code Here
+      //       return String(zName)
+      //         .split(" ")
+      //         [Number(false)].concat(
+      //           " " +
+      //             String(zName)
+      //               .split(" ")
+      //               [Number(true)].charAt(Number(false))
+      //               .toUpperCase() +
+      //             "."
+      //         );
+      //       // Osama Mohamed => Osama M.
+      //       // Ahmed ali => Ahmed A.
+      //     }
+      //     function ageWithMessage(zAge) {
+      //       // Write Your Code Here
+      //       // 38 Is My Age => Your Age Is 38
+      //       // 32 Is The Age => Your Age Is 32
+      //       return `Your Age Is ${String(zAge).split(" ")[Number(false)]}`;
+      //     }
+      //     function countryTwoLetters(zCountry) {
+      //       // Write Your Code Here
+      //       // Egypt => You Live In EG
+      //       // Syria => You Live In SY
+      //       return `You Live In ${String(zCountry).substr(
+      //         Number(false),
+      //         Number(true)
+      //       )}${String(zCountry)
+      //         .substr(Number(true), Number(true))
+      //         .toUpperCase()}`;
+      //     }
+      //     function fullDetails() {
+      //       // Write Your Code Here
+      //       return (
+      //         namePattern(zName) +
+      //         `,` +
+      //         ageWithMessage(zAge) +
+      //         `,` +
+      //         countryTwoLetters(zCountry)
+      //       );
+      //     }
+      //     return fullDetails(); // Do Not Edit This
+      //   }
+
+      //   console.log(getDetails("Osama Mohamed", "38 Is My Age", "Egypt"));
+      //   // Hello Osama M., Your Age Is 38, You Live In EG
+
+      //   console.log(getDetails("Ahmed ali", "32 Is The Age", "Syria"));
+      //   // Hello Ahmed A., Your Age Is 32, You Live In SY
+
+      //assignment 2
+      //   let itsMe = () => `Iam A Normal Function`;
+      //   console.log(itsMe()); // Iam A Normal Function
+      //   function urlCreate(protocol, web, tld) {
+      //     return `${protocol}://www.${web}.${tld}`;
+      //   }
+      //   let urlCreate = (protocol, web, tld) => `${protocol}://www.${web}.${tld}`;
+
+      //   console.log(urlCreate("https", "google", "com")); // https://www.elzero.org
+      //assignment 3
+      //   function checker(zName) {
+      //     return function (status) {
+      //       return function (salary) {
+      //         return status === "Available"
+      //           ? `${zName}, My Salary Is ${salary}`
+      //           : `Iam Not Avaialble`;
+      //       };
+      //     };
+      //   }
+      //
+      //   function checker(zName) {
+      //     return function (status) {
+      //       return function (salary) {
+      //         return status === "Available"
+      //           ? `${zName}, My Salary Is ${salary}`
+      //           : `Iam Not Avaialble`;
+      //       };
+      //     };
+      //   }
+      //   //currying function each parameter is passed to function to reduce errors and avoid passing same parameter mu;tiple times
+      //   let checker = (zName) => (status) => (salary) =>
+      //     status === "Available"
+      //       ? `${zName}, My Salary Is ${salary}`
+      //       : `Iam Not Avaialble`;
+
+      //   console.log(checker("Osama")("Available")(4000)); // Osama, My Salary Is 4000
+      //   console.log(checker("Ahmed")("Not Available")()); // Iam Not Avaialble
+
+      //assignment 4
+      function specialMix(...data) {
+        // Your Code Here
+        let i = 0;
+        let sum = 0;
+        while (i < data.length) {
+          if (typeof data[i] === "string") {
+            if (!isNaN(parseInt(data[i]))) {
+              sum += parseInt(data[i]);
+            }
+          } else {
+            sum += parseInt(data[i]);
+          }
+          i++;
+        }
+
+        if (sum) {
+          return sum;
+        } else {
+          return "All Is Strings";
+        }
+      }
+
+      console.log(specialMix(10, "70no", 30)); // 60
+      console.log(specialMix("10Test", "Testing", "20Cool")); // 30
+      console.log(specialMix("Testing", "10Testing", "40Cool")); // 50
+      console.log(specialMix("Test", "Cool", "Test")); // All Is Strings
+    </script>
+  </body>
+</html>
