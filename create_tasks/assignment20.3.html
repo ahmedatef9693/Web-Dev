@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    .add {
+      background-color: #ff5334;
+      color: aliceblue;
+      border: none;
+    }
+
+    .container {
+      background-color: #eee;
+      width: 600px;
+      height: 80px;
+      margin: 40px auto;
+      border-radius: 10px;
+    }
+    .form {
+      padding: 20px;
+      height: 50%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+    }
+    .input {
+      border: none;
+      outline: none;
+      text-align: center;
+      border-radius: 5px;
+    }
+    .add {
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .tasks {
+      background-color: #eee;
+      padding: 10px;
+      min-height: 50px;
+      margin: 40px auto;
+      border-radius: 10px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="form">
+        <input type="text" class="input" placeholder="Write Task Name" />
+        <input type="submit" class="add" value="Add Task" />
+      </div>
+      <div class="tasks"></div>
+    </div>
+    <script src="assignment20.3.js"></script>
+  </body>
+</html>
