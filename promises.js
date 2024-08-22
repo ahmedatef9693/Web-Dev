@@ -218,46 +218,62 @@
 //     });
 // });
 
-//Assignment 2
-function cloringDivs() {
-  let rgbColors = [];
-  for (let i = 0; i < 3; i++) {
-    rgbColors.push(Math.floor(Math.random() * 255));
-  }
-  return rgbColors;
-}
-async function fetchData(apiLink) {
-  let response = await fetch(apiLink);
+// //Assignment 2
+// function cloringDivs() {
+//   let rgbColors = [];
+//   for (let i = 0; i < 3; i++) {
+//     rgbColors.push(Math.floor(Math.random() * 255));
+//   }
+//   return rgbColors;
+// }
+// async function fetchData(apiLink) {
+//   let response = await fetch(apiLink);
 
-  if (response.status === 200) {
-    return response.json();
-  } else {
-    throw new Error("Error While Accessing Api");
-  }
-}
-function renderData(jsonData) {
-  jsonData.forEach((object) => {
-    let div = document.createElement("div");
-    let header = document.createElement("h3");
-    header.innerHTML = object.name;
-    let paragrah = document.createElement("p");
-    paragrah.innerHTML = object.description;
-    div.appendChild(header);
-    div.appendChild(paragrah);
+//   if (response.status === 200) {
+//     return response.json();
+//   } else {
+//     throw new Error("Error While Accessing Api");
+//   }
+// }
+// function renderData(jsonData) {
+//   jsonData.forEach((object) => {
+//     let div = document.createElement("div");
+//     let header = document.createElement("h3");
+//     header.innerHTML = object.name;
+//     let paragrah = document.createElement("p");
+//     paragrah.innerHTML = object.description;
+//     div.appendChild(header);
+//     div.appendChild(paragrah);
 
-    div.style.backgroundColor = `rgb(${cloringDivs().join(",")})`;
-    document.body.appendChild(div);
-  });
-}
-window.addEventListener("load", async function (event) {
-  let data = await fetchData(
-    "https://api.github.com/users/elzerowebschool/repos"
-  );
-  renderData(data);
-});
+//     div.style.backgroundColor = `rgb(${cloringDivs().join(",")})`;
+//     document.body.appendChild(div);
+//   });
+// }
+// window.addEventListener("load", async function (event) {
+//   let data = await fetchData(
+//     "https://api.github.com/users/elzerowebschool/repos"
+//   );
+//   renderData(data);
+// });
 
 // fetch("https://api.github.com/users/elzerowebschool/repos")
 //   .then((response) => response.json())
 //   .then((data) => {
 //     console.log(data);
 //   });
+
+Promise.all([
+  fetch("https://jsonplaceholder.typicode.com/users"),
+  fetch("https://jsonplaceholder.typicode.com/posts"),
+  fetch("https://jsonplaceholder.typicode.com/photos"),
+])
+  .then(function (responses) {
+    return Promise.all(
+      responses.map(function (response) {
+        return response.json();
+      })
+    );
+  })
+  .then(function (responses) {
+    console.log(responses);
+  });
