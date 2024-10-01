@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading Example</title>
+    <style>
+      #loading {
+        display: none;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 24px;
+        color: #333;
+      }
+      button:disabled {
+        background-color: grey;
+        cursor: not-allowed;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loading">Loading...</div>
+    <button id="fetchButton">Fetch Data</button>
+    <button id="fetchButton2">Fetch Data 2</button>
+
+    <script>
+      const fetchButton = document.getElementById("fetchButton");
+      const fetchButton2 = document.getElementById("fetchButton2");
+      const loadingIndicator = document.getElementById("loading");
+      fetchButton2.addEventListener("click", async function (e) {
+        console.log("yeeeeeeeeeeeeeees");
+      });
+      fetchButton.addEventListener("click", async function () {
+        console.time("Fetching Data");
+
+        // Show the loading indicator and disable the button
+        loadingIndicator.style.display = "block";
+        fetchButton.disabled = true;
+
+        try {
+          let values = await Promise.all([
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+            getData1(),
+            getData2(),
+            getData3(),
+          ]);
+
+          console.log(values);
+        } catch (error) {
+          console.error("Error fetching data:", error);
+        } finally {
+          // Hide the loading indicator and enable the button again
+          loadingIndicator.style.display = "none";
+          fetchButton.disabled = false; // Re-enable the button
+          console.timeEnd("Fetching Data");
+        }
+      });
+
+      async function getData1() {
+        let response = await fetch(
+          "https://jsonplaceholder.typicode.com/users"
+        );
+        response = await response.json();
+        return update_length(response);
+      }
+
+      function getData2() {
+        return fetch("https://jsonplaceholder.typicode.com/posts")
+          .then((res) => res.json())
+          .then((data) => {
+            data.length = 15;
+            return data;
+          });
+      }
+
+      async function getData3() {
+        let response = await fetch(
+          "https://jsonplaceholder.typicode.com/photos"
+        );
+        response = await response.json();
+        return update_length(response);
+      }
+
+      function update_length(data) {
+        data.length = 10;
+        return data;
+      }
+    </script>
+  </body>
+</html>
